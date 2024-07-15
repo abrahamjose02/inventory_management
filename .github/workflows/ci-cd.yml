@@ -47,7 +47,7 @@ jobs:
 
       - name: Build and push client image
         run: |
-          docker build -t abrahamjose04/client:latest ./client
+          docker build -t abrahamjose04/client:latest ./client-service
           docker push abrahamjose04/client:latest
 
   deploy:
