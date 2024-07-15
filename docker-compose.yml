@@ -3,6 +3,7 @@ version: '3.8'
 services:
   product-service:
     build: ./product-service
+    image: abrahamjose04/product-service:latest
     ports:
       - "3000:3000"
     environment:
@@ -14,6 +15,7 @@ services:
 
   inventory-service:
     build: ./inventory-service
+    image: abrahamjose04/inventory-service:latest
     ports:
       - "3001:3001"
     environment:
@@ -25,6 +27,7 @@ services:
 
   client-service:
     build: ./client-service
+    image: abrahamjose04/client-service:latest
     ports:
       - "5173:5173"
     environment:
