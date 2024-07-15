@@ -4,6 +4,7 @@ let products = [];
 const createProduct = async (req, res) => {
     try {
         const { name, price } = req.body;
+        console.log(req.body)
         const newProduct = { id: generateProductId(), name, price };
         products.push(newProduct);
         await req.rabbitMQ.publishMessage(JSON.stringify(newProduct), 'product.created');

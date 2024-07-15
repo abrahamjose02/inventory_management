@@ -11,13 +11,13 @@ function App() {
       </h1>
 
       <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Products</h2>
+        
         <CreateProduct />
         <ProductList />
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold mb-4">Inventory</h2>
+        
         <InventoryList />
       </div>
     </div>

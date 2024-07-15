@@ -1,7 +1,7 @@
 const amqp = require('amqplib');
 
 const connectionRabbitMQ = async () => {
-    const connection = await amqp.connect('amqp://rabbitmq');
+    const connection = await amqp.connect('amqp://localhost');
     const channel = await connection.createChannel();
     await channel.assertExchange('product_exchange', 'direct', { durable: true });
     const q = await channel.assertQueue('inventory_queue', { durable: true });
